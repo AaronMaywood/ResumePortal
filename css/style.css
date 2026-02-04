@@ -25,13 +25,17 @@ header {
     text-align: center;
     color: white;
     margin-bottom: 3rem;
-    padding-top: 2rem;
+    padding-top: 0.5rem;
 }
 
 .logo {
-    max-width: 300px;
+    max-width: 150px;
     height: auto;
     margin-bottom: 1.5rem;
+    margin-left: 0;
+    margin-right: auto;
+    margin-top: 0;
+    display: block;
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
 }
 
@@ -140,7 +144,7 @@ footer {
     }
     
     .logo {
-        max-width: 250px;
+        max-width: 120px;
     }
     
     header h1 {
@@ -167,7 +171,7 @@ footer {
 
 @media (max-width: 480px) {
     .logo {
-        max-width: 200px;
+        max-width: 100px;
     }
     
     header h1 {
