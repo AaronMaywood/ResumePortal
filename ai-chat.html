@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自己PR生成AI - 履歴書作成ポータル</title>
+    <link rel="stylesheet" href="css/ai-chat.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>自己PR生成AI</h1>
+            <a href="index.html" class="back-link">← ポータルに戻る</a>
+        </header>
+        
+        <main>
+            <!-- 利用規約・個人情報保護方針セクション -->
+            <section class="terms-section">
+                <div class="terms-container">
+                    <div class="terms-item">
+                        <button class="terms-toggle" aria-expanded="false" aria-controls="terms-content">
+                            <span>利用規約</span>
+                            <span class="toggle-icon">▼</span>
+                        </button>
+                        <div id="terms-content" class="terms-content" style="display: none;">
+                            <h3>利用規約</h3>
+                            <p>本サービス（以下「当サービス」）は、ユーザーが自己PR文の作成を支援するためのAIチャットサービスです。</p>
+                            <h4>1. サービスの利用</h4>
+                            <p>ユーザーは、当サービスを利用するにあたり、以下の事項に同意する必要があります。</p>
+                            <ul>
+                                <li>提供される情報は参考として利用し、最終的な判断はユーザー自身が行うこと</li>
+                                <li>不適切な内容の入力や、他者への誹謗中傷を目的とした利用を禁止すること</li>
+                                <li>当サービスの知的財産権を尊重すること</li>
+                            </ul>
+                            <h4>2. 免責事項</h4>
+                            <p>当サービスは、生成された内容の正確性、完全性、有用性について一切保証しません。ユーザーは自己の責任において当サービスを利用するものとします。</p>
+                            <h4>3. サービスの変更・終了</h4>
+                            <p>当サービスは、事前の通知なく、サービスの内容を変更または終了することがあります。</p>
+                            <p class="terms-date">最終更新日: 2026年2月4日</p>
+                        </div>
+                    </div>
+                    
+                    <div class="terms-item">
+                        <button class="terms-toggle" aria-expanded="false" aria-controls="privacy-content">
+                            <span>個人情報保護方針</span>
+                            <span class="toggle-icon">▼</span>
+                        </button>
+                        <div id="privacy-content" class="terms-content" style="display: none;">
+                            <h3>個人情報保護方針</h3>
+                            <p>当サービスは、ユーザーの個人情報の保護を重要な責務と考えています。</p>
+                            <h4>1. 収集する情報</h4>
+                            <p>当サービスでは、以下の情報を収集する場合があります：</p>
+                            <ul>
+                                <li>チャット入力内容（自己PR文作成のための情報）</li>
+                                <li>利用規約への同意状態</li>
+                            </ul>
+                            <h4>2. 情報の利用目的</h4>
+                            <p>収集した情報は、以下の目的でのみ利用されます：</p>
+                            <ul>
+                                <li>AIチャット機能の提供</li>
+                                <li>サービスの改善</li>
+                            </ul>
+                            <h4>3. 情報の管理</h4>
+                            <p>当サービスは、収集した個人情報を適切に管理し、第三者への提供は行いません。ただし、法令に基づく場合を除きます。</p>
+                            <h4>4. データの保存</h4>
+                            <p>チャット内容は、ブラウザのローカルストレージに保存される場合があります。ブラウザの設定により削除することができます。</p>
+                            <p class="terms-date">最終更新日: 2026年2月4日</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="consent-section">
+                    <label class="consent-checkbox">
+                        <input type="checkbox" id="consent-checkbox" aria-required="true">
+                        <span>利用規約および個人情報保護方針に同意します</span>
+                    </label>
+                </div>
+            </section>
+            
+            <!-- チャットセクション -->
+            <section class="chat-section" id="chat-section">
+                <div class="chat-container">
+                    <div class="chat-messages" id="chat-messages">
+                        <!-- 初期会話例 -->
+                        <div class="message user-message">
+                            <div class="message-content">
+                                <p>自己PR文をつくって</p>
+                            </div>
+                            <div class="message-time">例</div>
+                        </div>
+                        <div class="message ai-message">
+                            <div class="message-avatar">🤖</div>
+                            <div class="message-content">
+                                <p>こんにちは！自己PR文の作成をお手伝いします。あなたの強みや経験、これまでの成果などを教えていただけますか？それに基づいて、効果的な自己PR文を作成いたします。</p>
+                            </div>
+                            <div class="message-time">例</div>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-input-container">
+                        <div class="input-wrapper">
+                            <textarea 
+                                id="chat-input" 
+                                placeholder="メッセージを入力してください..." 
+                                rows="1"
+                                disabled
+                                aria-label="チャット入力欄"></textarea>
+                            <button id="send-button" class="send-button" disabled aria-label="送信">
+                                <span>送信</span>
+                            </button>
+                        </div>
+                        <p class="input-hint" id="input-hint">利用規約に同意するとチャットが利用できます</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <script src="js/ai-chat.js"></script>
+</body>
+</html>
